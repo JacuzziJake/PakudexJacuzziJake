@@ -52,6 +52,9 @@ def mainMenu(pakudex):
             print("Thanks for using Pakudex! Bye!")
             repeat = False
 
+        else:
+            print("Unrecognized menu selection!\n")
+
 
 
 
