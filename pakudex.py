@@ -43,7 +43,7 @@ class Pakudex:
         self.species.append(pakuri.Pakuri(name))
         self.names.append(name)
         self.size += 1
-        print(f"{name} successfully added!")
+        print(f"Pakuri species {name} successfully added!")
         return True
 
     def evolve_pakuri(self, name):

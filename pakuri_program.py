@@ -10,7 +10,7 @@ def mainMenu(pakudex):
         print("Pakudex Main Menu")
         print("-----------------")
         print("1. List Pakuri\n2. Show Pakuri\n3. Add Pakuri\n4. Evolve Pakuri\n5. Sort Pakuri\n6. Exit\n")
-        choice = int(input("What would you like to do?"))
+        choice = int(input("What would you like to do? "))
         if choice == 1:
             if len(pakudex.species) == 0:
                 print("No Pakuri in Pakudex yet!")
@@ -29,7 +29,7 @@ def mainMenu(pakudex):
                     print(f"Speed: {spicy.speed}")
 
         elif choice == 3:
-            name = input("Enter the name of the species you would like to add:")
+            name = input("Enter the name of the species to add:")
             pakudex.add_pakuri(name)
 
         elif choice == 4:
@@ -57,11 +57,9 @@ def mainMenu(pakudex):
 
 
 
-
-
 if __name__ == '__main__':
     print("Welcome to Pakudex: Tracker Extraordinaire!")
-    capacity = int(input("Enter max capacity of the Pakudex:"))
+    capacity = int(input("Enter max capacity of the Pakudex: "))
     print(f"The Pakudex can hold {capacity} species of Pakuri.\n")
     Pakudex = pakudex.Pakudex(capacity)
     mainMenu(Pakudex)
