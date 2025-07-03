@@ -10,8 +10,8 @@ def mainMenu(pakudex):
         print("Pakudex Main Menu")
         print("-----------------")
         print("1. List Pakuri\n2. Show Pakuri\n3. Add Pakuri\n4. Evolve Pakuri\n5. Sort Pakuri\n6. Exit\n")
-        choice = int(input("What would you like to do? "))
-        if choice == 1:
+        choice = input("What would you like to do? ")
+        if int(choice) == 1:
             if len(pakudex.species) == 0:
                 print("No Pakuri in Pakudex yet!")
             print("Pakuri In Pakudex:")
@@ -19,7 +19,7 @@ def mainMenu(pakudex):
             for name in pakudex.names:
                 print(f"{i}. {name}")
                 i += 1
-        elif choice == 2:
+        elif int(choice) == 2:
             name = input("Enter the name of the species to display: ")
             foundspecies = False
             for spicy in pakudex.species:
@@ -32,24 +32,24 @@ def mainMenu(pakudex):
             if not foundspecies:
                 print("Error: No such Pakuri!")
 
-        elif choice == 3:
+        elif int(choice) == 3:
             if pakudex.get_size() == pakudex.get_capacity():
                 print("Error: Pakudex is full!")
             else:
                 name = input("Enter the name of the species to add: ")
                 pakudex.add_pakuri(name)
 
-        elif choice == 4:
+        elif int(choice) == 4:
             name = input("Enter the name of the species to evolve: ")
             evolved = pakudex.evolve_species(name)
             if not evolved:
                 print("Error: No such Pakuri!")
 
-        elif choice == 5:
+        elif int(choice) == 5:
             pakudex.sort_pakuri()
             print("Pakuri have been sorted!")
 
-        elif choice == 6:
+        elif int(choice) == 6:
             print("Thanks for using Pakudex! Bye!")
             repeat = False
 
