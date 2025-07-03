@@ -63,9 +63,7 @@ def mainMenu(pakudex):
 
 if __name__ == '__main__':
     print("Welcome to Pakudex: Tracker Extraordinaire!")
-    capacitystr = input("Enter max capacity of the Pakudex: ")
-    if not capacitystr.isdigit():
-        capacity = int(capacitystr)
+    capacity = int(input("Enter max capacity of the Pakudex: "))
     print(f"The Pakudex can hold {capacity} species of Pakuri.\n")
     Pakudex = pakudex.Pakudex(capacity)
     mainMenu(Pakudex)
