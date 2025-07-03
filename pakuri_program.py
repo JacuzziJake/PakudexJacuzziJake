@@ -68,7 +68,7 @@ if __name__ == '__main__':
             if capacity > 0:
                 valid_capacity = True
         else:
-            print("Invalid capacity!")
+            print("Please enter a valid size.")
 
 
     print(f"The Pakudex can hold {capacity} species of Pakuri.\n")
