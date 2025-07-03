@@ -17,6 +17,8 @@ class Pakudex:
         return self.capacity
 
     def get_species_array(self):
+        if self.size == 0:
+            return None
         return self.species
 
     def get_stats(self, name):
