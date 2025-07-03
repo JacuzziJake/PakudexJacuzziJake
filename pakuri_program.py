@@ -30,7 +30,7 @@ def mainMenu(pakudex):
                     print(f"Defense: {spicy.defense}")
                     print(f"Speed: {spicy.speed}")
             if not foundspecies:
-                print("Error: No Such Pakuri!")
+                print("Error: No such Pakuri!")
 
         elif choice == 3:
             if len(pakudex.species) == pakudex.get_capacity():
@@ -49,7 +49,7 @@ def mainMenu(pakudex):
                     print(f"{species.species} has evolved!")
                     break
             if not evolved:
-                print("Error: No Such Pakuri!")
+                print("Error: No such Pakuri!")
 
         elif choice == 5:
             pakudex.sort_pakuri()
