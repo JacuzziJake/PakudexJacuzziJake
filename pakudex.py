@@ -19,7 +19,7 @@ class Pakudex:
     def get_species_array(self):
         if self.size == 0:
             return None
-        return self.species
+        return self.names
 
     def get_stats(self, name):
         stats = []
