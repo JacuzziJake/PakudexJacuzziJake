@@ -33,7 +33,7 @@ def mainMenu(pakudex):
                 print("Error: No Such Pakuri!")
 
         elif choice == 3:
-            if len(pakudex.species) == capacity:
+            if len(pakudex.species) == pakudex.get_capacity():
                 print("Error: Pakudex is full!")
             else:
                 name = input("Enter the name of the species to add: ")
@@ -49,7 +49,7 @@ def mainMenu(pakudex):
                     print(f"{species.species} has evolved!")
                     break
             if not evolved:
-                print("Error: No such Pakuri!")
+                print("Error: No Such Pakuri!")
 
         elif choice == 5:
             pakudex.sort_pakuri()
