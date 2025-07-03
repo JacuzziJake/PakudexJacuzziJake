@@ -41,13 +41,7 @@ def mainMenu(pakudex):
 
         elif choice == 4:
             name = input("Enter the name of the species to evolve: ")
-            evolved = False
-            for species in pakudex.species:
-                if species.species == name:
-                    species.evolve()
-                    evolved = True
-                    print(f"{species.species} has evolved!")
-                    break
+            evolved = pakudex.evolve_species(name)
             if not evolved:
                 print("Error: No such Pakuri!")
 

@@ -29,6 +29,8 @@ class Pakudex:
                 stats.append(spicy.get_defense())
                 stats.append(spicy.get_speed())
                 return stats
+        if len(stats) == 0:
+            return None
         return stats
 
     def sort_pakuri(self):
@@ -48,7 +50,7 @@ class Pakudex:
         print(f"Pakuri species {name} successfully added!")
         return True
 
-    def evolve_pakuri(self, name):
+    def evolve_species(self, name):
         for spicy in self.species:
             if spicy.species == name:
                 spicy.evolve()
